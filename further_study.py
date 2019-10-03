@@ -83,6 +83,10 @@ def custom_extend(input_list, second_list):
 
     """
 
+    for i in second_list:
+        new_list = [input_list[-1],i]
+        input_list[-1:] = new_list
+
     pass
 
 
