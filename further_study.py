@@ -37,6 +37,8 @@ def custom_len(input_list):
 
     return counter
 
+    # did this one right!
+
 
 # For the next four exercises, you'll need to be clever and think about ways
 # to use list slice assignment.
@@ -104,8 +106,8 @@ def custom_insert(input_list, index, value):
         True
 
     """
-    input_list[index:index+1] = value
-    print(input_list)
+    input_list[index:index] = [value]
+    # print(input_list)
     pass
 
 
@@ -171,7 +173,6 @@ def custom_index(input_list, value):
         index += 1
         if item == value:
             return index
-            break
     pass
 
 
@@ -188,8 +189,12 @@ def custom_count(input_list, value):
         2
 
     """
-
-    return 0
+    count = 0
+    for item in input_list:
+        if item == value:
+            count += 1
+    
+    return count
 
 
 def custom_reverse(input_list):
@@ -207,7 +212,7 @@ def custom_reverse(input_list):
         True
 
     """
-
+    input_list[:] = input_list[::-1]
     pass
 
 
